@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 import { Toggle } from '@fluentui/react';
+import { FluentProvider, Switch, webLightTheme } from '@fluentui/react-components';
 import { CollapsibleComponent } from 'common/components/collapsible-component';
 import { FocusComponent, FocusComponentDeps } from 'common/components/focus-component';
 import { HeadingWithContentLink } from 'common/components/heading-with-content-link';
@@ -159,10 +160,13 @@ export const AdhocTabStopsTestView = NamedFC<AdhocTabStopsTestViewProps>(
                 <Toggle
                     onClick={clickHandler}
                     id="tab-stops-visual-helper"
-                    label="Visual helper"
+                    label="Visual helper1111"
                     checked={scanData.enabled}
                     className={styles.visualHelperToggle}
                 />
+                <FluentProvider theme={webLightTheme}>
+                    <Switch label="This is a switch" className={styles.visualHelperToggle} />
+                </FluentProvider>
                 <CollapsibleComponent
                     header={
                         <span

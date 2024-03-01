@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 
 import { Checkbox, Dialog, DialogFooter, DialogType, PrimaryButton, Stack } from '@fluentui/react';
+import { Checkbox as Checkbox2, FluentProvider, webLightTheme } from '@fluentui/react-components'
 import { UserConfigMessageCreator } from 'common/message-creators/user-config-message-creator';
 import { UserConfigurationStoreData } from 'common/types/store-data/user-configuration-store';
 import { VisualizationScanResultData } from 'common/types/store-data/visualization-scan-result-data';
@@ -103,10 +104,13 @@ export class AutoDetectedFailuresDialog extends React.Component<
                     >
                         <Stack.Item grow disableShrink>
                             <Checkbox
-                                label={"Don't show again"}
+                                label={"Don't show again 1111"}
                                 onChange={this.disableAutoDetectedFailuresDialog}
                                 checked={this.state.isDisableBoxChecked}
                             />
+                            <FluentProvider theme={webLightTheme}>
+                                <Checkbox2 size='large' label={"Don't show again 2222"} />
+                            </FluentProvider>
                         </Stack.Item>
                         <Stack.Item grow>
                             <PrimaryButton

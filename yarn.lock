@@ -2687,7 +2687,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fluentui/react@npm:^8.96.1":
+"@fluentui/react@npm:8.96.1, @fluentui/react@npm:^8.96.1":
   version: 8.96.1
   resolution: "@fluentui/react@npm:8.96.1"
   dependencies:
@@ -4061,12 +4061,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:^16.9.15":
-  version: 16.9.15
-  resolution: "@types/react-dom@npm:16.9.15"
+"@types/react-dom@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@types/react-dom@npm:17.0.2"
   dependencies:
-    "@types/react": ^16
-  checksum: 37e3518a461c5dbfc89bad2c0f0585254398e502a08b353ba63a7bc92e76f1c80a45d7c4c41a19c3b164270c1b3fbfc5d574b99d016d6af8808294e407c344b0
+    "@types/react": "*"
+  checksum: 1725928a1c3a0026044e6401e6b53729e1a88849034fc67138d7784ec44a5132fe2e9056a19b741ccb462ff0ec0d8c2c01ef316bda19be0e31f2ead9346f600b
   languageName: node
   linkType: hard
 
@@ -4100,7 +4100,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^16, @types/react@npm:^16.14.25":
+"@types/react@npm:*, @types/react@npm:^16":
   version: 16.14.25
   resolution: "@types/react@npm:16.14.25"
   dependencies:
@@ -4108,6 +4108,16 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: 3a06cf26f2cad40b14bea707a0ca5343d6bcce133a27ecc291c269d65d9998fd56807371c8e912b95c6fe5c426751ac2e419ae6df0e69bba59e4d84e1165f48f
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@types/react@npm:17.0.2"
+  dependencies:
+    "@types/prop-types": "*"
+    csstype: ^3.0.2
+  checksum: a5198857165feddcbfc7d33e3322460ac62b8894d702414496a825b0c82272911ec33a42ef7c9d623a59308070eef4dfee6ff834b0674aa3f87eeb644196ee3b
   languageName: node
   linkType: hard
 
@@ -4676,6 +4686,7 @@ __metadata:
   resolution: "accessibility-insights-web@workspace:."
   dependencies:
     "@esbuild-plugins/node-resolve": ^0.2.2
+    "@fluentui/react": 8.96.1
     "@fluentui/react-components": ^9.46.4
     "@microsoft/applicationinsights-web": ^2.8.15
     "@swc/core": ^1.3.107
@@ -4691,8 +4702,8 @@ __metadata:
     "@types/lodash": ^4.14.202
     "@types/luxon": ^3.4.0
     "@types/node": ^16.11.7
-    "@types/react": ^16.14.25
-    "@types/react-dom": ^16.9.15
+    "@types/react": 17.0.2
+    "@types/react-dom": 17.0.2
     "@types/react-helmet": ^6.1.11
     "@types/react-router-dom": ^5.3.3
     "@types/serve-static": ^1.15.5
@@ -4746,8 +4757,8 @@ __metadata:
     postcss: ^8.4.33
     postcss-modules: ^6.0.0
     prettier: ^3.2.4
-    react: ^18.2.0
-    react-dom: ^18.2.0
+    react: ^18.0.2
+    react-dom: ^18.0.2
     react-helmet: ^6.1.0
     react-resize-detector: ^9.1.1
     react-router-dom: ^6.21.3
@@ -12909,7 +12920,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.2.0":
+"react-dom@npm:^18.0.2":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -13055,7 +13066,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.2.0":
+"react@npm:^18.0.2":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
