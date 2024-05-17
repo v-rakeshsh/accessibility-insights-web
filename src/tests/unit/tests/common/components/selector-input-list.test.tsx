@@ -326,7 +326,10 @@ describe('SelectorInputListTest', () => {
         const inputText = renderResult.getByPlaceholderText(
             'Enter element selector here',
         ) as HTMLInputElement;
-        fireEvent.change(inputText, { target: { value: givenSelector } });
+        act(() => {
+            fireEvent.change(inputText, { target: { value: givenSelector } });
+        });
+
         expect(inputText.value).toBe(givenSelector);
         const button = renderResult.getByRole('button', { name: 'Add Selector' });
         await userEvent.click(button);

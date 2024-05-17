@@ -1,7 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 import { Dialog, DialogFooter } from '@fluentui/react';
-import { render } from '@testing-library/react';
+import { act, render } from '@testing-library/react';
 import { ToolData } from 'common/types/store-data/unified-data-interface';
 import * as React from 'react';
 import { IMock, It, Mock, MockBehavior, Times } from 'typemoq';
@@ -140,7 +140,10 @@ describe('IssueFilingDialog', () => {
             ActionAndCancelButtonsComponent,
         );
 
-        actionCancelButtons.cancelButtonOnClick(null);
+        act(() => {
+            actionCancelButtons.cancelButtonOnClick(null);
+        });
+
         isSettingsValidMock.verifyAll();
         onCloseMock.verifyAll();
     });
@@ -169,7 +172,9 @@ describe('IssueFilingDialog', () => {
         const actionCancelButtons = getMockComponentClassPropsForCall(
             ActionAndCancelButtonsComponent,
         );
-        actionCancelButtons.primaryButtonOnClick(eventStub);
+        act(() => {
+            actionCancelButtons.primaryButtonOnClick(eventStub);
+        });
 
         isSettingsValidMock.verifyAll();
         userConfigMessageCreatorMock.verifyAll();
@@ -207,7 +212,9 @@ describe('IssueFilingDialog', () => {
             propertyName: propertyStub,
             propertyValue: propertyValueStub,
         };
-        issueFilingSettingsContainer.onPropertyUpdateCallback(payload);
+        act(() => {
+            issueFilingSettingsContainer.onPropertyUpdateCallback(payload);
+        });
 
         expect(renderResult.asFragment()).toMatchSnapshot();
         expectMockedComponentPropsToMatchSnapshots([Dialog]);
@@ -235,7 +242,9 @@ describe('IssueFilingDialog', () => {
             propertyName: propertyStub,
             propertyValue: propertyValueStub,
         };
-        issueFilingSettingsContainer.onPropertyUpdateCallback(payload);
+        act(() => {
+            issueFilingSettingsContainer.onPropertyUpdateCallback(payload);
+        });
 
         expect(renderResult.asFragment()).toMatchSnapshot();
         expectMockedComponentPropsToMatchSnapshots([Dialog]);
@@ -271,7 +280,9 @@ describe('IssueFilingDialog', () => {
         const payload = {
             issueFilingServiceName: differentServiceKey,
         };
-        issueFilingSettingsContainer.onSelectedServiceChange(payload);
+        act(() => {
+            issueFilingSettingsContainer.onSelectedServiceChange(payload);
+        });
 
         expect(renderResult.asFragment()).toMatchSnapshot();
         expectMockedComponentPropsToMatchSnapshots([Dialog]);
