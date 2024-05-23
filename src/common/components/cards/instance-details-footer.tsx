@@ -1,6 +1,7 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 import { Label } from '@fluentui/react';
+import { useLabelStyles_unstable, useThemeClassName, Label as V9Label } from '@fluentui/react-components';
 import {
     CardFooterInstanceActionButtons,
     CardFooterInstanceActionButtonsDeps,
@@ -87,10 +88,13 @@ export const InstanceDetailsFooter = NamedFC<InstanceDetailsFooterProps>(
             }[highlightState];
 
             return (
-                <div className={styles.highlightStatus}>
-                    {icon}
-                    <Label>{label}</Label>
-                </div>
+                <>
+                    <div className={styles.highlightStatus}>
+                        {icon}
+                        {/* <Label>{label}</Label> */}
+                        <V9Label className=''>{label}</V9Label>
+                    </div>
+                </>
             );
         };
 

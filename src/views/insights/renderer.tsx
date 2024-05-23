@@ -7,6 +7,7 @@ import * as React from 'react';
 import { createRoot } from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 import { InsightsRouter, ContentRouteDeps } from './insights-router';
+import { FluentProvider } from '@fluentui/react-components';
 
 export type RendererDeps = {
     dom: Document;
@@ -28,8 +29,10 @@ export function renderer(deps: RendererDeps): void {
     root.render(
         <>
             <HelmetProvider>
-                <Theme deps={deps} />
-                <InsightsRouter deps={deps} />
+                {/* <Theme deps={deps} /> */}
+                <FluentProvider>
+                    <InsightsRouter deps={deps} />
+                </FluentProvider>
             </HelmetProvider>
         </>,
     );

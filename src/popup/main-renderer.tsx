@@ -11,6 +11,8 @@ import { DiagnosticViewToggleFactory } from './components/diagnostic-view-toggle
 import { PopupViewControllerDeps, PopupViewWithStoreSubscription } from './components/popup-view';
 import { PopupHandlers } from './handlers/popup-handlers';
 import { LaunchPadRowConfigurationFactory } from './launch-pad-row-configuration-factory';
+import { Button, FluentProvider, teamsHighContrastTheme, webDarkTheme } from '@fluentui/react-components';
+import { ThemeProviderAll } from 'popup/ThemeProviderAll';
 
 export type MainRendererDeps = PopupViewControllerDeps &
     WithStoreSubscriptionDeps<ThemeInnerState> &
@@ -28,25 +30,28 @@ export class MainRenderer {
         private readonly launchPadRowConfigurationFactory: LaunchPadRowConfigurationFactory,
         private readonly diagnosticViewToggleFactory: DiagnosticViewToggleFactory,
         private readonly dropdownClickHandler: DropdownClickHandler,
-    ) {}
+    ) { }
 
     public render(): void {
         const container = this.dom.querySelector('#popup-container');
         const root = this.renderer(container);
+        console.log('rendering main renderer on toggle---')
         root.render(
             <>
-                <Theme deps={this.deps} />
-                <PopupViewWithStoreSubscription
-                    deps={this.deps}
-                    title={title}
-                    popupHandlers={this.popupHandlers}
-                    popupWindow={this.popupWindow}
-                    targetTabUrl={this.targetTabUrl}
-                    hasAccess={this.hasAccess}
-                    launchPadRowConfigurationFactory={this.launchPadRowConfigurationFactory}
-                    diagnosticViewToggleFactory={this.diagnosticViewToggleFactory}
-                    dropdownClickHandler={this.dropdownClickHandler}
-                />
+                {/* <Theme deps={this.deps} /> */}
+                <ThemeProviderAll deps={this.deps}>
+                    <PopupViewWithStoreSubscription
+                        deps={this.deps}
+                        title={title}
+                        popupHandlers={this.popupHandlers}
+                        popupWindow={this.popupWindow}
+                        targetTabUrl={this.targetTabUrl}
+                        hasAccess={this.hasAccess}
+                        launchPadRowConfigurationFactory={this.launchPadRowConfigurationFactory}
+                        diagnosticViewToggleFactory={this.diagnosticViewToggleFactory}
+                        dropdownClickHandler={this.dropdownClickHandler}
+                    />
+                </ThemeProviderAll>
             </>,
         );
     }

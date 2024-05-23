@@ -47,7 +47,7 @@ export class ThemeInner extends React.Component<ThemeInnerProps> {
 
     private loadAppropriateTheme(isHighContrast: boolean): void {
         const appropriateTheme = isHighContrast ? HighContrastTheme : DefaultTheme;
-        this.props.deps.loadTheme(appropriateTheme);
+        // this.props.deps.loadTheme(appropriateTheme);
     }
 
     private isHighContrastEnabled(props: ThemeInnerProps): boolean {
