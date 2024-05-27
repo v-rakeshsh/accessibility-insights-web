@@ -9,6 +9,7 @@ import * as React from 'react';
 import { CopyIcon } from '../../common/icons/copy-icon';
 import { CreateIssueDetailsTextData } from '../types/create-issue-details-text-data';
 import { Toast, ToastDeps } from './toast';
+import { Button } from '@fluentui/react-components';
 
 export type CopyIssueDetailsButtonDeps = ToastDeps & {
     navigatorUtils: NavigatorUtils;
@@ -64,13 +65,14 @@ export class CopyIssueDetailsButton extends React.Component<CopyIssueDetailsButt
         return (
             <>
                 <Toast ref={this.toastRef} deps={this.props.deps} />
-                <DefaultButton
+                {/* <DefaultButton
                     className={'copy-issue-details-button'}
                     onClick={this.copyButtonClicked}
                 >
                     <CopyIcon />
                     <div className="ms-Button-label">Copy failure details</div>
-                </DefaultButton>
+                </DefaultButton> */}
+                <Button className={'copy-issue-details-button'} icon={<CopyIcon />}><div className="ms-Button-label">Copy failure details</div></Button>
             </>
         );
     }

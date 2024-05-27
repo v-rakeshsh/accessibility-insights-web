@@ -12,6 +12,7 @@ import {
 import { ReportExportFormat } from '../../common/extension-telemetry-events';
 import { NamedFC } from '../../common/react/named-fc';
 import styles from './export-dialog.scss';
+import { Button } from '@fluentui/react-components';
 
 export const singleExportToHtmlButtonDataAutomationId = 'single-export-to-html-button';
 
@@ -68,17 +69,24 @@ export const ExportDialog = NamedFC<ExportDialogProps>('ExportDialog', props => 
 
     const getSingleExportToHtmlButton = () => {
         return (
-            <PrimaryButton
-                onClick={event => {
-                    props.generateExports();
-                    onExportLinkClick(event as React.MouseEvent<HTMLAnchorElement>, 'html');
-                }}
+            // <PrimaryButton
+            //     onClick={event => {
+            //         props.generateExports();
+            //         onExportLinkClick(event as React.MouseEvent<HTMLAnchorElement>, 'html');
+            //     }}
+            //     download={props.htmlFileName}
+            //     href={props.htmlFileUrl}
+            //     data-automation-id={singleExportToHtmlButtonDataAutomationId}
+            // >
+            //     Export
+            // </PrimaryButton>
+            <Button appearance='primary' onClick={event => {
+                props.generateExports();
+                onExportLinkClick(event as React.MouseEvent<HTMLAnchorElement>, 'html');
+            }}
                 download={props.htmlFileName}
                 href={props.htmlFileUrl}
-                data-automation-id={singleExportToHtmlButtonDataAutomationId}
-            >
-                Export
-            </PrimaryButton>
+                data-automation-id={singleExportToHtmlButtonDataAutomationId}>Export</Button>
         );
     };
 

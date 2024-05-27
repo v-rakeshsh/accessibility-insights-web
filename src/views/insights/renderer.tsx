@@ -29,10 +29,9 @@ export function renderer(deps: RendererDeps): void {
     root.render(
         <>
             <HelmetProvider>
+                {/* <InsightsRouter deps={deps} /> */}
                 {/* <Theme deps={deps} /> */}
-                <FluentProvider>
-                    <InsightsRouter deps={deps} />
-                </FluentProvider>
+                <Theme deps={deps} children={<InsightsRouter deps={deps} />} />
             </HelmetProvider>
         </>,
     );

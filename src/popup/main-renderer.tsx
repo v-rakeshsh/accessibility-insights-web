@@ -38,20 +38,20 @@ export class MainRenderer {
         console.log('rendering main renderer on toggle---')
         root.render(
             <>
-                {/* <Theme deps={this.deps} /> */}
-                <ThemeProviderAll deps={this.deps}>
-                    <PopupViewWithStoreSubscription
-                        deps={this.deps}
-                        title={title}
-                        popupHandlers={this.popupHandlers}
-                        popupWindow={this.popupWindow}
-                        targetTabUrl={this.targetTabUrl}
-                        hasAccess={this.hasAccess}
-                        launchPadRowConfigurationFactory={this.launchPadRowConfigurationFactory}
-                        diagnosticViewToggleFactory={this.diagnosticViewToggleFactory}
-                        dropdownClickHandler={this.dropdownClickHandler}
-                    />
-                </ThemeProviderAll>
+                <Theme deps={this.deps} children={<PopupViewWithStoreSubscription
+                    deps={this.deps}
+                    title={title}
+                    popupHandlers={this.popupHandlers}
+                    popupWindow={this.popupWindow}
+                    targetTabUrl={this.targetTabUrl}
+                    hasAccess={this.hasAccess}
+                    launchPadRowConfigurationFactory={this.launchPadRowConfigurationFactory}
+                    diagnosticViewToggleFactory={this.diagnosticViewToggleFactory}
+                    dropdownClickHandler={this.dropdownClickHandler}
+                />} />
+                {/* <ThemeProviderAll deps={this.deps}> */}
+
+                {/* </ThemeProviderAll> */}
             </>,
         );
     }
