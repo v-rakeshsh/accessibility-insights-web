@@ -19,7 +19,7 @@ span.collapsible-title {
     align-items: center;
 
     h2 {
-        font-weight: $normal-title-font-weight;
+        font-weight: normal;
         font-size: 17px;
     }
 }
@@ -27,4 +27,5 @@ span.collapsible-title {
 .collapsible-content {
     overflow: hidden;
     padding-left: calc(0.5vw + 13px); // 13px is Chevron width.
+    font-size:30px;
 }

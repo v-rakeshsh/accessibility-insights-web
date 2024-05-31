@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
-import { ActionButton } from '@fluentui/react';
+import { Button } from '@fluentui/react-components';
 import { css } from '@fluentui/utilities';
 import { HeadingElementForLevel, HeadingLevel } from 'common/components/heading-element-for-level';
 import { NamedFC } from 'common/react/named-fc';
@@ -58,7 +58,7 @@ const CollapsibleComponentCards = NamedFC<CollapsibleComponentCardsProps>(
             collapsedCSSClassName = null;
         }
 
-        const onClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        const onClick = (event: React.MouseEvent<any>) => {
             if (event.nativeEvent.detail === 0 && deps.setFocusVisibility != null) {
                 // 0 => keyboard event
                 deps.setFocusVisibility(true);
@@ -66,7 +66,6 @@ const CollapsibleComponentCards = NamedFC<CollapsibleComponentCardsProps>(
 
             onExpandToggle(event);
         };
-
         return (
             <div
                 data-automation-id={containerAutomationId}
@@ -77,15 +76,16 @@ const CollapsibleComponentCards = NamedFC<CollapsibleComponentCardsProps>(
                 )}
             >
                 <HeadingElementForLevel headingLevel={headingLevel as HeadingLevel}>
-                    <ActionButton
+                    <Button
+                        appearance="transparent"
                         data-automation-id={collapsibleButtonAutomationId}
                         className={styles.collapsibleControl}
                         onClick={onClick}
                         aria-expanded={showContent}
-                        ariaLabel={buttonAriaLabel}
+                        aria-label={buttonAriaLabel}
                     >
                         <span className={styles.collapsibleTitle}>{header}</span>
-                    </ActionButton>
+                    </Button>
                 </HeadingElementForLevel>
                 {contentWrapper}
             </div>
