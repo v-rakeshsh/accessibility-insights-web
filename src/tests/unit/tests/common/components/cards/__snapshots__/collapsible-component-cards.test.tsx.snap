@@ -205,7 +205,39 @@ exports[`CollapsibleComponentCardsTest render with contentClassName set to: unde
 </DocumentFragment>
 `;
 
-exports[`CollapsibleComponentCardsTest set focus visibility when expanding/collapsing should set focus visibility to true for keyboard event: collapsed 1`] = `<DocumentFragment />`;
+exports[`CollapsibleComponentCardsTest toggle from expanded to collapsed: collapsed 1`] = `
+<DocumentFragment>
+  <div
+    class="collapsibleContainer"
+  >
+    <mock-headingelementforlevel>
+      <button
+        aria-expanded="true"
+        class="fui-Button r1alrhcs collapsibleControl ___eduuxo0_1tclg4b f1c21dwh f1p3nwhy f11589ue f1q5o8ev f1pdflbu fkfq4zb fjxutwb f1s2uweq fr80ssc f1ukrpxl fecsdlb f139oj5f ft1hn21 fuxngvv fwiml72 f1h0usnq fs4ktlq f16h9ulv fx2bmrt f1fg1p5m f1dfjoow f1j98vj9 f1tme0vf f4xjyn1 f18onu3q f9ddjv3"
+        data-automation-id="collapsible-component-cards-button"
+        type="button"
+      >
+        <span
+          class="collapsibleTitle"
+        >
+          <mock-headingelementforlevel
+            headinglevel="5"
+          >
+            Some header
+          </mock-headingelementforlevel>
+        </span>
+      </button>
+    </mock-headingelementforlevel>
+    <div
+      class="collapsibleContainerContent"
+    >
+      <div>
+        Some content
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
 
 exports[`CollapsibleComponentCardsTest toggle from expanded to collapsed: expanded 1`] = `
 <DocumentFragment>

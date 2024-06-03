@@ -17,6 +17,7 @@ import {
     mockReactComponents,
     useOriginalReactElements,
 } from '../../../../mock-helpers/mock-module-helpers';
+import { fireEvent } from '@testing-library/react';
 
 jest.mock('common/components/heading-element-for-level');
 jest.mock('@fluentui/react-components');
@@ -82,7 +83,7 @@ describe('CollapsibleComponentCardsTest', () => {
         useOriginalReactElements('@fluentui/react-components', ['Button']);
         const renderResult = render(control);
         expect(renderResult.asFragment()).toMatchSnapshot('expanded');
-        await userEvent.click(renderResult.getByRole('button'));
+        await fireEvent.click(renderResult.getByRole('button'));
         expect(renderResult.asFragment()).toMatchSnapshot('collapsed');
 
         onExpandToggleMock.verifyAll();
