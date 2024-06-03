@@ -88,7 +88,6 @@ describe('CollapsibleComponentCardsTest', () => {
 
         onExpandToggleMock.verifyAll();
     });
-    console.log();
     describe('set focus visibility when expanding/collapsing', () => {
         let props: CollapsibleComponentCardsProps;
 
