@@ -49,12 +49,14 @@ export class CollapsibleComponent extends React.Component<
                     className={styles.collapsible}
                     onClick={this.onClick}
                     aria-expanded={showContent}
+                    icon={
+                        showContent ? (
+                            <ChevronDownRegular className={styles.collapsible} />
+                        ) : (
+                            <ChevronRightRegular className={styles.collapsible} />
+                        )
+                    }
                 >
-                    {showContent ? (
-                        <ChevronDownRegular className={styles.collapsible} />
-                    ) : (
-                        <ChevronRightRegular className={styles.collapsible} />
-                    )}{' '}
                     {this.props.header}
                 </Button>
 

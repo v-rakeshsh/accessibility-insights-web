@@ -9,9 +9,10 @@ span.collapsible-title {
 
 .collapsible {
     display: inline-flex;
-    font-size: 26px;
+    font-size: 26px !important;
     height: auto;
     width: auto;
+    margin: -10px;
     text-align: left;
     color: rgb(16, 110, 190);
 
@@ -25,5 +26,3 @@ span.collapsible-title {
     overflow: hidden;
     padding-left: calc(0.5vw + 13px); // 13px is Chevron width.
 }
-
-
