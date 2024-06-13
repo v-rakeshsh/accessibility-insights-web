@@ -124,13 +124,13 @@ export class AssessmentInstanceTable extends React.Component<AssessmentInstanceT
 
         return (
             <InsightsCommandButton
+                as="button"
                 data-automation-id={passUnmarkedInstancesButtonAutomationId}
-                iconProps={{ iconName: 'skypeCheck' }}
+                iconProps={{ iconName: 'Checkmark16Filled' }}
                 onClick={this.onPassUnmarkedInstances}
                 disabled={disabled}
-            >
-                Pass unmarked instances
-            </InsightsCommandButton>
+                text=" Pass unmarked instances"
+            />
         );
     }
 

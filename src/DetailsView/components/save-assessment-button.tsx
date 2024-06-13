@@ -100,13 +100,12 @@ export const SaveAssessmentButton = NamedFC<SaveAssessmentButtonProps>(
                 <DialogV9>
                     <DialogTrigger>
                         <InsightsCommandButton
-                            iconProps={{ iconName: 'Save' }}
+                            iconProps={{ iconName: 'SaveRegular' }}
                             download={props.download}
                             href={props.href}
                             onClick={handleSaveAssessmentClick}
-                        >
-                            Save assessment
-                        </InsightsCommandButton>
+                            text="Save assessment"
+                        />
                     </DialogTrigger>
                     <DialogSurface>
                         <DialogBody>
@@ -140,7 +139,9 @@ export const SaveAssessmentButton = NamedFC<SaveAssessmentButtonProps>(
                                     </Stack.Item>
                                     <Stack.Item grow>
                                         <DialogTrigger>
-                                            <Button onClick={hideDialog} appearance='primary'>Got it</Button>
+                                            <Button onClick={hideDialog} appearance="primary">
+                                                Got it
+                                            </Button>
                                         </DialogTrigger>
                                     </Stack.Item>
                                 </Stack>

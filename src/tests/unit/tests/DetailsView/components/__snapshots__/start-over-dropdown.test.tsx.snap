@@ -4,7 +4,7 @@ exports[`StartOverDropdownTest render 1`] = `
 <DocumentFragment>
   <div>
     <mock-insightscommandbutton
-      arialabel="start over menu"
+      aria-label="start over menu"
       componentref="[object Object]"
       iconprops="[object Object]"
       menuiconprops="[object Object]"
@@ -18,7 +18,7 @@ exports[`StartOverDropdownTest render ContextualMenu 1`] = `
 <DocumentFragment>
   <div>
     <mock-insightscommandbutton
-      arialabel="start over menu"
+      aria-label="start over menu"
       componentref="[object Object]"
       iconprops="[object Object]"
       menuiconprops="[object Object]"
@@ -37,7 +37,7 @@ exports[`StartOverDropdownTest render with dropdown on left 1`] = `
 <DocumentFragment>
   <div>
     <mock-insightscommandbutton
-      arialabel="start over menu"
+      aria-label="start over menu"
       componentref="[object Object]"
       iconprops="[object Object]"
       menuiconprops="[object Object]"
@@ -54,13 +54,13 @@ exports[`StartOverDropdownTest render with dropdown on left 1`] = `
 
 exports[`StartOverDropdownTest render: InsightsCommandButton props 1`] = `
 {
-  "ariaLabel": "start over menu",
+  "aria-label": "start over menu",
   "componentRef": {},
   "iconProps": {
-    "iconName": "Refresh",
+    "iconName": "ArrowClockwiseRegular",
   },
   "menuIconProps": {
-    "iconName": "ChevronDown",
+    "iconName": "ChevronDownRegular",
   },
   "onClick": [Function],
   "text": "Start over",
