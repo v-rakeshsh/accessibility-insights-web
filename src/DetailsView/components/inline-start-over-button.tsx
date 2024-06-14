@@ -24,7 +24,7 @@ export const InlineStartOverButton = NamedFC<InlineStartOverButtonProps>(
             <InsightsCommandButton
                 onClick={rescan}
                 text="Start over"
-                iconProps={{ iconName: 'ArrowClockwiseRegular' }}
+                iconName="ArrowClockwiseRegular"
                 className={styles.inlineStartOverButton}
                 data-automation-id={inlineStartOverButtonDataAutomationId}
             />

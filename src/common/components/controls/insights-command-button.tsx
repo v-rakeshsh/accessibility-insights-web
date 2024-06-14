@@ -1,20 +1,9 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 import { css } from '@fluentui/react';
-import {
-    Button,
-    ButtonProps,
-} from '@fluentui/react-components';
-import {
-    ArrowExportRegular,
-    FolderArrowRightRegular,
-    FolderOpenRegular,
-    SaveRegular,
-    ArrowClockwiseRegular,
-    Checkmark16Filled,
-    ChevronDownRegular,
-    ChevronRightRegular,
-} from '@fluentui/react-icons';
+import { Button, ButtonProps } from '@fluentui/react-components';
+import { Icons } from 'common/icons/fluentui-v9-icons';
+
 import { NamedFC } from 'common/react/named-fc';
 import * as React from 'react';
 import styles from './insights-command-button.scss';
@@ -28,17 +17,6 @@ export type InsightsCommandButtonProps = ButtonProps & {
 };
 
 // See https://www.figma.com/file/Wj4Ggf6GGQBQkiDIaHfXRX2B/Accessibility-Insights%3A-Styles?node-id=1%3A27
-
-const Icons = {
-    ArrowExportRegular: <ArrowExportRegular />,
-    FolderArrowRightRegular: <FolderArrowRightRegular />,
-    FolderOpenRegular: <FolderOpenRegular />,
-    SaveRegular: <SaveRegular />,
-    ArrowClockwiseRegular: <ArrowClockwiseRegular />,
-    Checkmark16Filled: <Checkmark16Filled />,
-    ChevronDownRegular: <ChevronDownRegular />,
-    ChevronRightRegular: <ChevronRightRegular />,
-};
 
 export const InsightsCommandButton = NamedFC<InsightsCommandButtonProps>(
     'InsightsCommandButton',

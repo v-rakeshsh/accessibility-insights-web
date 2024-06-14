@@ -30,7 +30,7 @@ export class LoadAssessmentButton extends React.Component<LoadAssessmentButtonPr
         return (
             <InsightsCommandButton
                 data-automation-id={loadAssessmentButtonAutomationId}
-                iconProps={{ iconName: 'FolderOpenRegular' }}
+                iconName="FolderOpenRegular"
                 onClick={this.props.handleLoadAssessmentButtonClick}
                 text="Load assessment"
             />

@@ -100,7 +100,7 @@ export const SaveAssessmentButton = NamedFC<SaveAssessmentButtonProps>(
                 <DialogV9>
                     <DialogTrigger>
                         <InsightsCommandButton
-                            iconProps={{ iconName: 'SaveRegular' }}
+                            iconName={'SaveRegular'}
                             download={props.download}
                             href={props.href}
                             onClick={handleSaveAssessmentClick}

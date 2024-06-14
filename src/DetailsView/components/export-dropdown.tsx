@@ -55,10 +55,15 @@ export class ExportDropdown extends React.Component<ExportDropdownProps, ExportD
                     }}
                     data-automation-id={reportExportDropdownAutomationId}
                 /> */}
-                <Button appearance='primary' aria-label="export options menu"
+                <Button
+                    appearance="primary"
+                    aria-label="export options menu"
                     onClick={this.openDropdown}
                     icon={<ChevronDownRegular />}
-                    data-automation-id={reportExportDropdownAutomationId}>Export</Button>
+                    data-automation-id={reportExportDropdownAutomationId}
+                >
+                    Export
+                </Button>
                 {this.renderContextMenu()}
             </div>
         );

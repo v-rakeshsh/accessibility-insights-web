@@ -24,7 +24,7 @@ export const TransferToAssessmentButton = NamedFC<TransferToAssessmentButtonProp
         return (
             <InsightsCommandButton
                 data-automation-id={transferToAssessmentButtonAutomationId}
-                iconProps={{ iconName: 'FolderArrowRightRegular' }}
+                iconName={'FolderArrowRightRegular'}
                 onClick={
                     props.deps.dataTransferViewController.showQuickAssessToAssessmentConfirmDialog
                 }

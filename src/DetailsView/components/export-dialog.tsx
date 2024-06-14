@@ -80,13 +80,18 @@ export const ExportDialog = NamedFC<ExportDialogProps>('ExportDialog', props => 
             // >
             //     Export
             // </PrimaryButton>
-            <Button appearance='primary' onClick={event => {
-                props.generateExports();
-                onExportLinkClick(event as React.MouseEvent<HTMLAnchorElement>, 'html');
-            }}
+            <Button
+                appearance="primary"
+                onClick={event => {
+                    props.generateExports();
+                    onExportLinkClick(event as React.MouseEvent<HTMLAnchorElement>, 'html');
+                }}
                 download={props.htmlFileName}
                 href={props.htmlFileUrl}
-                data-automation-id={singleExportToHtmlButtonDataAutomationId}>Export</Button>
+                data-automation-id={singleExportToHtmlButtonDataAutomationId}
+            >
+                Export
+            </Button>
         );
     };
 

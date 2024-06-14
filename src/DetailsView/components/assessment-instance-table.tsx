@@ -126,7 +126,7 @@ export class AssessmentInstanceTable extends React.Component<AssessmentInstanceT
             <InsightsCommandButton
                 as="button"
                 data-automation-id={passUnmarkedInstancesButtonAutomationId}
-                iconProps={{ iconName: 'Checkmark16Filled' }}
+                iconName="Checkmark16Filled"
                 onClick={this.onPassUnmarkedInstances}
                 disabled={disabled}
                 text=" Pass unmarked instances"
